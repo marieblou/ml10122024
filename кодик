@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+
+from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
+from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score
+from sklearn.neighbors import NearestNeighbors # расстояние доя ближайших соседей для DBSCAN
+from sklearn.preprocessing import QuantileTransformer, PowerTransformer # преобразование данных
+from sklearn.preprocessing import StandardScaler  # z-нормировка
+# from sklearn.preprocessing import MinMaxScaler, RobustScaler # другие способы нормировки
+
+import seaborn as sns # 2D-визуализация
+import matplotlib.pyplot as plt
+import plotly.express as px # 3D-визуализация
+
+# Не показывать Warning
+import warnings
+warnings.simplefilter(action='ignore', category=Warning)
